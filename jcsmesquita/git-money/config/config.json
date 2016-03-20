@@ -1,0 +1,5 @@
+{
+    "path": "21hackers/git-money",
+    "action": [["git", "pull", "origin", "master"] ],
+    "bitgo_path": "INSERT BITGO EXPRESS PATH HERE - https://github.com/bitgo/bitgo-express"
+}
