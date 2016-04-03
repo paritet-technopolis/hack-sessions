@@ -1,0 +1,32 @@
+basePath: /
+host: 10.244.108.173:6006
+info:
+  contact: {email: erikvvold@gmail.com, name: Erik Vold}
+  description: Get NYT movie reviews by keyword.
+  title: NYT Movie Reviews
+  x-21-category: utilities
+  x-21-github-project-url: https://github.com/erikvold/nyt-movie-reviews21
+  x-21-keywords: [reviews, nyt, new york, new york times, erikvold, movies, critics]
+  x-21-quick-buy: "$ 21 buy url http://10.244.233.43:6006/?keyword=Batman\n\n\
+    # Output:\n\
+    # {\n\
+    #   \"results\": [...]\n\
+    # }"
+  x-21-total-price: {max: 2500, min: 2500}
+paths:
+  /:
+    get:
+      consumes: [application/x-www-form-urlencoded]
+      produces: [application/json]
+      responses:
+        200:
+          description: NYT movie reviews by keyword.
+          schema:
+            type: object
+            properties:
+              results:
+                type: array
+      summary: Get NYT movie reviews by keyword.
+schemes: [http]
+swagger: '2.0'
+x-21-manifest-path: /manifest
